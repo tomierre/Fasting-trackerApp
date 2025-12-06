@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="192" height="192" viewBox="0 0 192 192" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg192" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#6366f1;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#4f46e5;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Fondo circular -->
+  <circle cx="96" cy="96" r="96" fill="url(#bg192)"/>
+  
+  <!-- Anillo exterior -->
+  <circle cx="96" cy="96" r="74.88" fill="none" stroke="rgba(129, 140, 248, 0.3)" stroke-width="5.76"/>
+  
+  <!-- Anillo de progreso -->
+  <circle 
+    cx="96" 
+    cy="96" 
+    r="59.519999999999996" 
+    fill="none" 
+    stroke="#ffffff" 
+    stroke-width="7.68" 
+    stroke-linecap="round"
+    stroke-dasharray="373.97518948332896"
+    stroke-dashoffset="186.98759474166448"
+    transform="rotate(-90 96 96)"
+    opacity="0.9"
+  />
+  
+  <!-- Círculo interno -->
+  <circle cx="96" cy="96" r="44.160000000000004" fill="none" stroke="rgba(255, 255, 255, 0.4)" stroke-width="1.1520000000000001"/>
+  
+  <!-- Manecilla de horas -->
+  <line x1="96" y1="96" x2="96" y2="69.12" stroke="#ffffff" stroke-width="3.072" stroke-linecap="round" opacity="0.9"/>
+  
+  <!-- Manecilla de minutos -->
+  <line x1="96" y1="96" x2="113.28" y2="96" stroke="#ffffff" stroke-width="2.3040000000000003" stroke-linecap="round" opacity="0.9"/>
+  
+  <!-- Centro del reloj -->
+  <circle cx="96" cy="96" r="4.416" fill="#ffffff" opacity="0.9"/>
+</svg>

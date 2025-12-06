@@ -1,0 +1,58 @@
+<svg width="512" height="512" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+  <!-- Fondo circular con gradiente -->
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#6366f1;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#4f46e5;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="ringGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#818cf8;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#6366f1;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Fondo -->
+  <circle cx="256" cy="256" r="256" fill="url(#bgGradient)"/>
+  
+  <!-- Anillo exterior (simbolizando el temporizador) -->
+  <circle cx="256" cy="256" r="200" fill="none" stroke="url(#ringGradient)" stroke-width="16" opacity="0.3"/>
+  <circle cx="256" cy="256" r="180" fill="none" stroke="url(#ringGradient)" stroke-width="12" opacity="0.5"/>
+  
+  <!-- Anillo de progreso (parcialmente completo) -->
+  <circle 
+    cx="256" 
+    cy="256" 
+    r="160" 
+    fill="none" 
+    stroke="#ffffff" 
+    stroke-width="20" 
+    stroke-linecap="round"
+    stroke-dasharray="502.65"
+    stroke-dashoffset="251.325"
+    transform="rotate(-90 256 256)"
+    opacity="0.9"
+  />
+  
+  <!-- Símbolo de reloj interno -->
+  <circle cx="256" cy="256" r="120" fill="none" stroke="#ffffff" stroke-width="3" opacity="0.4"/>
+  
+  <!-- Manecillas del reloj -->
+  <line x1="256" y1="256" x2="256" y2="200" stroke="#ffffff" stroke-width="8" stroke-linecap="round" opacity="0.9"/>
+  <line x1="256" y1="256" x2="300" y2="256" stroke="#ffffff" stroke-width="6" stroke-linecap="round" opacity="0.9"/>
+  
+  <!-- Centro del reloj -->
+  <circle cx="256" cy="256" r="12" fill="#ffffff" opacity="0.9"/>
+  
+  <!-- Texto "F" sutil -->
+  <text 
+    x="256" 
+    y="340" 
+    font-family="Arial, sans-serif" 
+    font-size="80" 
+    font-weight="bold" 
+    fill="#ffffff" 
+    text-anchor="middle"
+    opacity="0.3"
+  >F</text>
+</svg>
+

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generador de Iconos PWA</title>
+    <style>
+        body {
+            font-family: system-ui, -apple-system, sans-serif;
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background: #1e293b;
+            color: #e2e8f0;
+        }
+        .container {
+            background: #334155;
+            padding: 30px;
+            border-radius: 12px;
+        }
+        canvas {
+            border: 2px solid #475569;
+            border-radius: 8px;
+            margin: 10px;
+        }
+        button {
+            background: #6366f1;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            margin: 10px 5px;
+        }
+        button:hover {
+            background: #4f46e5;
+        }
+        .preview {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+        .icon-preview {
+            text-align: center;
+        }
+        .icon-preview img {
+            border: 1px solid #475569;
+            border-radius: 8px;
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🎨 Generador de Iconos PWA</h1>
+        <p>Este script genera todos los iconos necesarios para la PWA. Haz clic en "Generar Iconos" y luego en "Descargar Todos".</p>
+        
+        <button onclick="generateIcons()">Generar Iconos</button>
+        <button onclick="downloadAll()">Descargar Todos los Iconos</button>
+        
+        <div id="preview" class="preview"></div>
+    </div>
+
+    <script>
+        const sizes = [72, 96, 128, 144, 152, 192, 384, 512];
+        const canvases = {};
+
+        function generateIcons() {
+            const preview = document.getElementById('preview');
+            preview.innerHTML = '';
+            
+            sizes.forEach(size => {
+                const canvas = document.createElement('canvas');
+                canvas.width = size;
+                canvas.height = size;
+                canvas.id = `canvas-${size}`;
+                
+                const ctx = canvas.getContext('2d');
+                
+                // Fondo con gradiente
+                const gradient = ctx.createLinearGradient(0, 0, size, size);
+                gradient.addColorStop(0, '#6366f1');
+                gradient.addColorStop(1, '#4f46e5');
+                ctx.fillStyle = gradient;
+                ctx.fillRect(0, 0, size, size);
+                
+                // Anillo exterior
+                ctx.strokeStyle = 'rgba(129, 140, 248, 0.3)';
+                ctx.lineWidth = size * 0.03;
+                ctx.beginPath();
+                ctx.arc(size/2, size/2, size * 0.39, 0, Math.PI * 2);
+                ctx.stroke();
+                
+                // Anillo de progreso
+                ctx.strokeStyle = '#ffffff';
+                ctx.lineWidth = size * 0.04;
+                ctx.lineCap = 'round';
+                ctx.beginPath();
+                ctx.arc(size/2, size/2, size * 0.31, -Math.PI/2, Math.PI/2);
+                ctx.stroke();
+                
+                // Círculo interno
+                ctx.strokeStyle = 'rgba(255, 255, 255, 0.4)';
+                ctx.lineWidth = size * 0.006;
+                ctx.beginPath();
+                ctx.arc(size/2, size/2, size * 0.23, 0, Math.PI * 2);
+                ctx.stroke();
+                
+                // Manecillas del reloj
+                const centerX = size / 2;
+                const centerY = size / 2;
+                
+                // Manecilla de horas
+                ctx.strokeStyle = '#ffffff';
+                ctx.lineWidth = size * 0.016;
+                ctx.lineCap = 'round';
+                ctx.beginPath();
+                ctx.moveTo(centerX, centerY);
+                ctx.lineTo(centerX, centerY - size * 0.14);
+                ctx.stroke();
+                
+                // Manecilla de minutos
+                ctx.lineWidth = size * 0.012;
+                ctx.beginPath();
+                ctx.moveTo(centerX, centerY);
+                ctx.lineTo(centerX + size * 0.09, centerY);
+                ctx.stroke();
+                
+                // Centro del reloj
+                ctx.fillStyle = '#ffffff';
+                ctx.beginPath();
+                ctx.arc(centerX, centerY, size * 0.023, 0, Math.PI * 2);
+                ctx.fill();
+                
+                canvases[size] = canvas;
+                
+                // Preview
+                const div = document.createElement('div');
+                div.className = 'icon-preview';
+                const img = document.createElement('img');
+                img.src = canvas.toDataURL('image/png');
+                img.width = 100;
+                img.height = 100;
+                div.appendChild(img);
+                div.appendChild(document.createTextNode(`${size}x${size}`));
+                preview.appendChild(div);
+            });
+        }
+
+        function downloadAll() {
+            sizes.forEach(size => {
+                const canvas = canvases[size];
+                if (!canvas) {
+                    alert('Primero genera los iconos');
+                    return;
+                }
+                
+                canvas.toBlob(blob => {
+                    const url = URL.createObjectURL(blob);
+                    const a = document.createElement('a');
+                    a.href = url;
+                    a.download = `icon-${size}x${size}.png`;
+                    a.click();
+                    URL.revokeObjectURL(url);
+                }, 'image/png');
+            });
+        }
+    </script>
+</body>
+</html>
+

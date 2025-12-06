@@ -1,0 +1,119 @@
+1. Descripción del Proyecto
+
+Crear una Progressive Web App (PWA) moderna para el seguimiento de ayuno intermitente (Fasting Tracker). La aplicación debe ser "Mobile-First", con una estética oscura (Dark Mode), minimalista y animaciones fluidas. Debe incluir integración con IA (Gemini) para motivación y consejos nutricionales, y sistema de cuentas de usuario para guardar el progreso.
+
+2. Tech Stack & Dependencias
+
+Framework: React (Vite).
+
+Lenguaje: JavaScript (ES6+) o TypeScript (Preferible).
+
+Estilos: Tailwind CSS (Priorizar clases utilitarias, gradientes y backdrop-blur).
+
+Iconos: lucide-react.
+
+Backend/Auth: Firebase (Authentication + Firestore).
+
+Estado: useState, useEffect y Context API (para sesión de usuario).
+
+API: Fetch nativo para Google Gemini API.
+
+Notificaciones: Browser Notification API nativa.
+
+3. Funcionalidades Core (Requisitos Obligatorios)
+
+A. Temporizador de Ayuno (Fasting Timer)
+
+Visualización: Un anillo de progreso circular (SVG) que se llena conforme avanza el tiempo.
+
+Datos en pantalla: Tiempo transcurrido (HH:MM:SS), Tiempo restante, Hora de inicio, Hora estimada de finalización.
+
+Estados: "Ayunando" (Fasting) vs "Ventana de Ingesta" (Eating Window).
+
+Acciones: Botón grande para Iniciar/Terminar ayuno con confirmación confirm().
+
+B. Configuración de Objetivos
+
+Panel de Ajustes: Un modal o sección colapsable.
+
+Presets: Botones rápidos para 13h, 16h (default), 18h, 20h, 24h, 36h.
+
+Ajuste Manual: Botones + y - para ajustar horas.
+
+Restricción: No permitir cambiar la meta si el ayuno ya está activo.
+
+C. Tracker de Hidratación
+
+Contador: Incrementos de 250ml (un vaso estándar).
+
+Visualización: Barra de progreso visual (ej. pila de vasos o barra de llenado).
+
+Lógica de Recordatorio: Si lastDrinkTime > 60 minutos, activar alerta/notificación.
+
+Persistencia: Guardar en base de datos (Firestore) vinculado al usuario.
+
+D. Integración IA (Gemini API)
+
+Modelo: gemini-2.5-flash (u otro disponible).
+
+Feature 1 - Coach Motivacional: Generar frases cortas basadas en la fase fisiológica del ayuno.
+
+Feature 2 - Chef (Romper Ayuno): Sugerir la primera comida post-ayuno.
+
+Manejo de Errores: Implementar "Exponential Backoff".
+
+UI: Mostrar respuestas en un modal con estado de "Cargando".
+
+E. Autenticación y Datos (Nuevo)
+
+Método: Firebase Auth (Email/Password o Google Sign-In).
+
+Protección: Pantalla de Login si no hay usuario autenticado.
+
+Base de Datos: Firestore Database.
+
+Colección users: Guardar configuración y estado actual (isFasting, startTime, etc.) para sincronizar entre dispositivos.
+
+F. Notificaciones
+
+Solicitar permisos de notificación al iniciar el primer ayuno.
+
+Enviar notificación local al cumplir horas o recordatorio de agua.
+
+4. Guía de Diseño (UI/UX)
+
+Paleta de Colores: Fondo slate-900, acentos indigo-500 (ayuno) y emerald-500 (éxito/comida).
+
+Tipografía: Sans-serif limpia (Inter o system-ui).
+
+Componentes: Tarjetas con bordes sutiles y fondos semitransparentes.
+
+Login UI: Formulario minimalista centrado, manteniendo la estética oscura.
+
+5. Estructura de Archivos Sugerida
+
+src/config/firebase.js (Inicialización de Firebase)
+
+src/context/AuthContext.jsx (Manejo de sesión global)
+
+src/components/Login.jsx
+
+src/components/TimerCircle.jsx
+
+src/components/WaterTracker.jsx
+
+src/components/GeminiModal.jsx
+
+src/hooks/useFastingTimer.js
+
+src/App.jsx
+
+6. Variables de Entorno
+
+VITE_GEMINI_API_KEY
+
+VITE_FIREBASE_API_KEY
+
+VITE_FIREBASE_AUTH_DOMAIN
+
+VITE_FIREBASE_PROJECT_ID
