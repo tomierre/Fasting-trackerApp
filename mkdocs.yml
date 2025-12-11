@@ -1,0 +1,75 @@
+site_name: Fasting Tracker - Documentación
+site_description: Progressive Web App para seguimiento de ayuno intermitente
+site_author: Fasting Tracker Team
+site_url: https://github.com/tomierre/Fasting-trackerApp
+
+repo_name: tomierre/Fasting-trackerApp
+repo_url: https://github.com/tomierre/Fasting-trackerApp
+edit_uri: edit/main/docs/
+
+theme:
+  name: material
+  palette:
+    - scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Cambiar a modo claro
+    - scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Cambiar a modo oscuro
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.code.annotate
+  icon:
+    repo: fontawesome/brands/github
+
+nav:
+  - Inicio: index.md
+  - Empezar:
+    - getting-started.md
+    - installation.md
+  - Características:
+    - features.md
+    - screenshots.md
+  - Desarrollo:
+    - architecture.md
+    - development.md
+    - components.md
+  - Deployment:
+    - deployment.md
+  - Proceso:
+    - process.md
+    - timeline.md
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - admonition
+  - pymdownx.details
+  - pymdownx.tabbed:
+      alternate_style: true
+  - attr_list
+  - md_in_html
+
+plugins:
+  - search
+  - git-revision-date-localized:
+      enable_creation_date: true
+
