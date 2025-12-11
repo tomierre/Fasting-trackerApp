@@ -101,13 +101,13 @@ Antes de hacer click en "Deploy", ve a la sección **"Environment Variables"**:
 ### Variables a Agregar:
 
 ```env
-VITE_GEMINI_API_KEY=tu_clave_real_de_gemini
-VITE_FIREBASE_API_KEY=AIzaSyCDZrw28v4Zb_kVFLQLjcMKgLNgs1h9GJw
-VITE_FIREBASE_AUTH_DOMAIN=fastingpro-app.firebaseapp.com
-VITE_FIREBASE_PROJECT_ID=fastingpro-app
-VITE_FIREBASE_STORAGE_BUCKET=fastingpro-app.firebasestorage.app
-VITE_FIREBASE_MESSAGING_SENDER_ID=725583095818
-VITE_FIREBASE_APP_ID=1:725583095818:web:3204e059a065456369d7f3
+VITE_GEMINI_API_KEY=reemplazar_aqui_con_tu_api_key_de_gemini
+VITE_FIREBASE_API_KEY=reemplazar_aqui_con_tu_firebase_api_key
+VITE_FIREBASE_AUTH_DOMAIN=reemplazar_aqui_con_tu_dominio.firebaseapp.com
+VITE_FIREBASE_PROJECT_ID=reemplazar_aqui_con_tu_project_id
+VITE_FIREBASE_STORAGE_BUCKET=reemplazar_aqui_con_tu_storage_bucket
+VITE_FIREBASE_MESSAGING_SENDER_ID=reemplazar_aqui_con_tu_sender_id
+VITE_FIREBASE_APP_ID=reemplazar_aqui_con_tu_app_id
 ```
 
 **Pasos para agregar cada variable:**
@@ -118,7 +118,7 @@ VITE_FIREBASE_APP_ID=1:725583095818:web:3204e059a065456369d7f3
    - Click en **"Add"**
 
 2. **Key**: `VITE_FIREBASE_API_KEY`
-   - **Value**: `AIzaSyCDZrw28v4Zb_kVFLQLjcMKgLNgs1h9GJw` (o la tuya si es diferente)
+   - **Value**: `reemplazar_aqui_con_tu_firebase_api_key`
    - **Environments**: Todas
    - Click en **"Add"**
 
@@ -140,7 +140,7 @@ Una vez que Vercel haga el deploy, obtendrás una URL como:
 **Antes o después del deploy, agrega este dominio a Firebase:**
 
 1. Ve a [Firebase Console](https://console.firebase.google.com/)
-2. Selecciona tu proyecto `fastingpro-app`
+2. Selecciona tu proyecto (reemplazar con tu project ID)
 3. Ve a **Authentication** → **Settings** → **Authorized domains**
 4. Click en **"Add domain"**
 5. Agrega: `fasting-web-xyz.vercel.app` (tu URL de Vercel)

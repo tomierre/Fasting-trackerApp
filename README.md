@@ -33,13 +33,13 @@ npm install
 Crea un archivo `.env` en la raíz del proyecto con las siguientes variables:
 
 ```env
-VITE_GEMINI_API_KEY=tu_clave_de_gemini
-VITE_FIREBASE_API_KEY=AIzaSyCDZrw28v4Zb_kVFLQLjcMKgLNgs1h9GJw
-VITE_FIREBASE_AUTH_DOMAIN=fastingpro-app.firebaseapp.com
-VITE_FIREBASE_PROJECT_ID=fastingpro-app
-VITE_FIREBASE_STORAGE_BUCKET=fastingpro-app.firebasestorage.app
-VITE_FIREBASE_MESSAGING_SENDER_ID=725583095818
-VITE_FIREBASE_APP_ID=1:725583095818:web:3204e059a065456369d7f3
+VITE_GEMINI_API_KEY=reemplazar_aqui_con_tu_api_key_de_gemini
+VITE_FIREBASE_API_KEY=reemplazar_aqui_con_tu_firebase_api_key
+VITE_FIREBASE_AUTH_DOMAIN=reemplazar_aqui_con_tu_dominio.firebaseapp.com
+VITE_FIREBASE_PROJECT_ID=reemplazar_aqui_con_tu_project_id
+VITE_FIREBASE_STORAGE_BUCKET=reemplazar_aqui_con_tu_storage_bucket
+VITE_FIREBASE_MESSAGING_SENDER_ID=reemplazar_aqui_con_tu_sender_id
+VITE_FIREBASE_APP_ID=reemplazar_aqui_con_tu_app_id
 ```
 
 **Nota**: Solo falta agregar tu `VITE_GEMINI_API_KEY`. Puedes obtenerla en [Google AI Studio](https://makersuite.google.com/app/apikey).

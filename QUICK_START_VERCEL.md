@@ -31,13 +31,13 @@ git push -u origin main
 
 | Key | Value (ejemplo) | Environments |
 |-----|----------------|--------------|
-| `VITE_GEMINI_API_KEY` | Tu clave real de Gemini | ✅ Todas |
-| `VITE_FIREBASE_API_KEY` | `AIzaSyCDZrw28v4Zb_kVFLQLjcMKgLNgs1h9GJw` | ✅ Todas |
-| `VITE_FIREBASE_AUTH_DOMAIN` | `fastingpro-app.firebaseapp.com` | ✅ Todas |
-| `VITE_FIREBASE_PROJECT_ID` | `fastingpro-app` | ✅ Todas |
-| `VITE_FIREBASE_STORAGE_BUCKET` | `fastingpro-app.firebasestorage.app` | ✅ Todas |
-| `VITE_FIREBASE_MESSAGING_SENDER_ID` | `725583095818` | ✅ Todas |
-| `VITE_FIREBASE_APP_ID` | `1:725583095818:web:3204e059a065456369d7f3` | ✅ Todas |
+| `VITE_GEMINI_API_KEY` | `reemplazar_aqui_con_tu_api_key_de_gemini` | ✅ Todas |
+| `VITE_FIREBASE_API_KEY` | `reemplazar_aqui_con_tu_firebase_api_key` | ✅ Todas |
+| `VITE_FIREBASE_AUTH_DOMAIN` | `reemplazar_aqui_con_tu_dominio.firebaseapp.com` | ✅ Todas |
+| `VITE_FIREBASE_PROJECT_ID` | `reemplazar_aqui_con_tu_project_id` | ✅ Todas |
+| `VITE_FIREBASE_STORAGE_BUCKET` | `reemplazar_aqui_con_tu_storage_bucket` | ✅ Todas |
+| `VITE_FIREBASE_MESSAGING_SENDER_ID` | `reemplazar_aqui_con_tu_sender_id` | ✅ Todas |
+| `VITE_FIREBASE_APP_ID` | `reemplazar_aqui_con_tu_app_id` | ✅ Todas |
 
 **Cómo agregar cada una:**
 - Key: El nombre (ej: `VITE_GEMINI_API_KEY`)

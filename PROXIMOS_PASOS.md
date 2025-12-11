@@ -86,27 +86,27 @@ En la página de configuración de Vercel:
    - Environments: ✅ Production ✅ Preview ✅ Development
 
 2. **VITE_FIREBASE_API_KEY**
-   - Valor: `AIzaSyCDZrw28v4Zb_kVFLQLjcMKgLNgs1h9GJw`
+   - Valor: `reemplazar_aqui_con_tu_firebase_api_key`
    - Environments: ✅ Todas
 
 3. **VITE_FIREBASE_AUTH_DOMAIN**
-   - Valor: `fastingpro-app.firebaseapp.com`
+   - Valor: `reemplazar_aqui_con_tu_dominio.firebaseapp.com`
    - Environments: ✅ Todas
 
 4. **VITE_FIREBASE_PROJECT_ID**
-   - Valor: `fastingpro-app`
+   - Valor: `reemplazar_aqui_con_tu_project_id`
    - Environments: ✅ Todas
 
 5. **VITE_FIREBASE_STORAGE_BUCKET**
-   - Valor: `fastingpro-app.firebasestorage.app`
+   - Valor: `reemplazar_aqui_con_tu_storage_bucket`
    - Environments: ✅ Todas
 
 6. **VITE_FIREBASE_MESSAGING_SENDER_ID**
-   - Valor: `725583095818`
+   - Valor: `reemplazar_aqui_con_tu_sender_id`
    - Environments: ✅ Todas
 
 7. **VITE_FIREBASE_APP_ID**
-   - Valor: `1:725583095818:web:3204e059a065456369d7f3`
+   - Valor: `reemplazar_aqui_con_tu_app_id`
    - Environments: ✅ Todas
 
 **Para cada variable:**

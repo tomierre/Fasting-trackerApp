@@ -65,13 +65,13 @@ Una vez que el código esté en GitHub:
 
 **ANTES de hacer deploy**, agrega estas 7 variables:
 
-1. **VITE_GEMINI_API_KEY** = Tu API key real de Gemini
-2. **VITE_FIREBASE_API_KEY** = `AIzaSyCDZrw28v4Zb_kVFLQLjcMKgLNgs1h9GJw`
-3. **VITE_FIREBASE_AUTH_DOMAIN** = `fastingpro-app.firebaseapp.com`
-4. **VITE_FIREBASE_PROJECT_ID** = `fastingpro-app`
-5. **VITE_FIREBASE_STORAGE_BUCKET** = `fastingpro-app.firebasestorage.app`
-6. **VITE_FIREBASE_MESSAGING_SENDER_ID** = `725583095818`
-7. **VITE_FIREBASE_APP_ID** = `1:725583095818:web:3204e059a065456369d7f3`
+1. **VITE_GEMINI_API_KEY** = `reemplazar_aqui_con_tu_api_key_de_gemini`
+2. **VITE_FIREBASE_API_KEY** = `reemplazar_aqui_con_tu_firebase_api_key`
+3. **VITE_FIREBASE_AUTH_DOMAIN** = `reemplazar_aqui_con_tu_dominio.firebaseapp.com`
+4. **VITE_FIREBASE_PROJECT_ID** = `reemplazar_aqui_con_tu_project_id`
+5. **VITE_FIREBASE_STORAGE_BUCKET** = `reemplazar_aqui_con_tu_storage_bucket`
+6. **VITE_FIREBASE_MESSAGING_SENDER_ID** = `reemplazar_aqui_con_tu_sender_id`
+7. **VITE_FIREBASE_APP_ID** = `reemplazar_aqui_con_tu_app_id`
 
 Marca todas para: ✅ Production ✅ Preview ✅ Development
 

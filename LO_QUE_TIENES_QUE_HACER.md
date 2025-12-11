@@ -76,37 +76,37 @@ git push -u origin main
 
 #### Variable 2: VITE_FIREBASE_API_KEY
 - **Key:** `VITE_FIREBASE_API_KEY`
-- **Value:** `AIzaSyCDZrw28v4Zb_kVFLQLjcMKgLNgs1h9GJw`
+- **Value:** `reemplazar_aqui_con_tu_firebase_api_key`
 - **Environments:** ✅ Todas
 - Click en **"Add"**
 
 #### Variable 3: VITE_FIREBASE_AUTH_DOMAIN
 - **Key:** `VITE_FIREBASE_AUTH_DOMAIN`
-- **Value:** `fastingpro-app.firebaseapp.com`
+- **Value:** `reemplazar_aqui_con_tu_dominio.firebaseapp.com`
 - **Environments:** ✅ Todas
 - Click en **"Add"**
 
 #### Variable 4: VITE_FIREBASE_PROJECT_ID
 - **Key:** `VITE_FIREBASE_PROJECT_ID`
-- **Value:** `fastingpro-app`
+- **Value:** `reemplazar_aqui_con_tu_project_id`
 - **Environments:** ✅ Todas
 - Click en **"Add"**
 
 #### Variable 5: VITE_FIREBASE_STORAGE_BUCKET
 - **Key:** `VITE_FIREBASE_STORAGE_BUCKET`
-- **Value:** `fastingpro-app.firebasestorage.app`
+- **Value:** `reemplazar_aqui_con_tu_storage_bucket`
 - **Environments:** ✅ Todas
 - Click en **"Add"**
 
 #### Variable 6: VITE_FIREBASE_MESSAGING_SENDER_ID
 - **Key:** `VITE_FIREBASE_MESSAGING_SENDER_ID`
-- **Value:** `725583095818`
+- **Value:** `reemplazar_aqui_con_tu_sender_id`
 - **Environments:** ✅ Todas
 - Click en **"Add"**
 
 #### Variable 7: VITE_FIREBASE_APP_ID
 - **Key:** `VITE_FIREBASE_APP_ID`
-- **Value:** `1:725583095818:web:3204e059a065456369d7f3`
+- **Value:** `reemplazar_aqui_con_tu_app_id`
 - **Environments:** ✅ Todas
 - Click en **"Add"**
 
@@ -137,7 +137,7 @@ git push -u origin main
 Después del deploy, necesitas agregar tu dominio de Vercel en Firebase:
 
 1. Ve a [Firebase Console](https://console.firebase.google.com/)
-2. Selecciona tu proyecto `fastingpro-app`
+2. Selecciona tu proyecto (reemplazar con tu project ID)
 3. Ve a **Authentication** → **Settings** → **Authorized domains**
 4. Click en **"Add domain"**
 5. Agrega tu dominio de Vercel: `tu-proyecto.vercel.app`

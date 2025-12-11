@@ -145,9 +145,9 @@ Cuando configures Vercel, **NO subirás** las variables de entorno al código. E
 ```javascript
 // En el bundle JavaScript del navegador verán:
 const firebaseConfig = {
-  apiKey: "AIzaSyCDZrw28v4Zb_kVFLQLjcMKgLNgs1h9GJw",  // ✅ Público por diseño
-  authDomain: "fastingpro-app.firebaseapp.com",        // ✅ Público
-  projectId: "fastingpro-app",                         // ✅ Público
+  apiKey: "reemplazar_aqui_con_tu_firebase_api_key",  // ✅ Público por diseño
+  authDomain: "reemplazar_aqui_con_tu_dominio.firebaseapp.com",        // ✅ Público
+  projectId: "reemplazar_aqui_con_tu_project_id",                         // ✅ Público
   // ...
 }
 
